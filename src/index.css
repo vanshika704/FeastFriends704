@@ -153,11 +153,11 @@ hr {
   justify-content: flex-start;
 }
 
-.food1 {
+/* .food1 {
   width: 1250px;
   height: 200px;
   max-width: 1250px;
-}
+} */
 
 .breadcrumb-divider {
   border-bottom: 1px solid white;
@@ -183,7 +183,7 @@ hr {
   position: relative;
   width: 1300px;
   height: 500px;
-  margin-right: 20px;
+  margin-left: 0px;
   margin-top: 20px;
   margin-bottom: 30px;
 }

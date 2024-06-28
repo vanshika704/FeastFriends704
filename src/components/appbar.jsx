@@ -3,7 +3,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
 function AppBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-black"> 
+    <nav className="navbar navbar-expand-lg navbar-light bg-black container-fluid"> 
       <div className="container-fluid">
       <div className="FeastFriends">Feast Friends</div>
        
