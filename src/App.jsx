@@ -9,6 +9,7 @@ import StartersPage from './pages/starters';
 import DessertsPage from './pages/Desserts';
 import DrinksPage from './pages/Drinks';
 import Home from './login';
+import Findpartner from './pages/Findpartners';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/main-course" element={<MainCoursePage />} />
         <Route path="/desserts" element={<DessertsPage />} />
         <Route path="/drinks" element={<DrinksPage />} />
+        <Route path="/find-partners" element={<Findpartner/>}/>
       </Routes>
     </Router>
   );

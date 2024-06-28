@@ -122,7 +122,7 @@ function Partners() {
                         )}
                     </FormControl>
 
-                    <Button colorScheme="teal" type="submit" isDisabled={isNameError || isEmailError || isLocationError || isBudgetError}>
+                    <Button colorScheme="teal" type="submit"  isDisabled={isNameError || isEmailError || isLocationError || isBudgetError}>
                         Submit
                     </Button>
                 </VStack>
