@@ -339,6 +339,7 @@ hr {
 }
 .Partners{
   height: 650px;
+  width: 1450px;
   display: flex;
   align-items: center;
   justify-content: start;
