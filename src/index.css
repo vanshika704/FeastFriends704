@@ -231,6 +231,7 @@ hr {
   height: 650px;
   display: flex;
   align-items: center;
+  justify-content: start;
 }
 
 .text-overlay {
@@ -300,7 +301,7 @@ hr {
   border-radius: 20px;
 }
 .grid-image1 {
-  width: 100%;
+  width: 90%;
   max-height: 420px; 
   object-fit: cover;
   display: block;
@@ -319,7 +320,7 @@ hr {
   right: 0;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 90%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
@@ -337,8 +338,10 @@ hr {
   margin-bottom: 2px; 
 }
 .Partners{
-  height: 630px;
-  width: 1350px;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   background-color: #242423;
   border-bottom-right-radius: 350px;
 }
