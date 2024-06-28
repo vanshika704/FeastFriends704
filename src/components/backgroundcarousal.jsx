@@ -27,11 +27,11 @@ const Gallery = () => {
   ];
 
   const renderedItems = items.map((item, index) => (
-    <img key={index} src={item} alt={`image-${index}`} className="gallery-image container-fluid" />
+    <img key={index} src={item} alt={`image-${index}`} className="gallery-image" />
   ));
 
   return (
-    <div className="gallery-container container-fluid">
+    <div className="gallery-container">
       <AliceCarousel
         animationType="fadeout"
         animationDuration={5000}

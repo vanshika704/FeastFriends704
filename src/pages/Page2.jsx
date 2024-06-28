@@ -23,7 +23,7 @@ export default MainPage;
 
 function Food1() {
   return (
-    <div className="image-container container-fluid">
+    <div className="image-container ">
       <Gallery />
       <div className="text-overlay container-fluid">
         <h1 className='container-fluid'>Life is Too Short For<br /> Boring food</h1>
@@ -35,7 +35,7 @@ function Food1() {
 
 function Greycontainer() {
   return (
-    <div className="grey-container ">
+    <div className="grey-container container-fluid">
       <div>
         <Link to="/explore">
           <FaSearch size={30} />
@@ -70,9 +70,9 @@ function Info() {
         templateColumns="repeat(4, 1fr)"
         gap={4}
         marginLeft={0}
-       
+        className='container-fluid'
       >
-        <GridItem className="grid-item " rowSpan={2} colSpan={2}>
+        <GridItem className="grid-item container-fluid" rowSpan={2} colSpan={2}>
           <Link to="/starters" className="image-box">
             <img src='src/assets/c1.jpg' alt='starters' className='grid-image1' />
             <div className="overlay-text1">Starters</div>
@@ -101,5 +101,5 @@ function Info() {
   );
 }
 function Data(){
-  return (<><div className='data '>data</div></>)
+  return (<><div className='data'>data</div></>)
 }

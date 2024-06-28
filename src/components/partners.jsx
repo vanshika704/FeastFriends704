@@ -64,14 +64,15 @@ function Partners() {
 
         return (
             <Box
-                maxW="md"
+                maxW={{ base: "95%", sm: "80%", md: "60%", lg: "50%" }}
                 borderWidth="1px"
                 borderRadius="lg"
                 overflow="hidden"
-                p="9"
+                p="6"
                 boxShadow="lg"
                 bg="white"
-                marginLeft={400}
+                mx="auto"
+                mt={{ base: 4, md: 8 }}
             >
                 <Heading as="h3" size="lg" mb="4" textAlign="center">
                     User Information
@@ -101,7 +102,7 @@ function Partners() {
                             onBlur={() => handleBlur('email')}
                         />
                         {!isEmailError ? (
-                            <FormHelperText>Enter the email</FormHelperText>
+                            <FormHelperText>Enter the email.</FormHelperText>
                         ) : (
                             <FormErrorMessage>Email is required.</FormErrorMessage>
                         )}
@@ -142,7 +143,7 @@ function Partners() {
                         type="submit"
                         onClick={Submit}
                         isDisabled={
-                            (isPristine || isNameError || isEmailError || isLocationError || isBudgetError)
+                            isPristine || isNameError || isEmailError || isLocationError || isBudgetError
                         }
                     >
                         Submit
@@ -153,7 +154,9 @@ function Partners() {
     };
 
     return (
-        <div className='Partners'><FormExample /></div>
+        <Box className='Partners' p={{ base: 2, md: 4 }}>
+            <FormExample />
+        </Box>
     );
 }
 

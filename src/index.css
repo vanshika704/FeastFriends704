@@ -153,11 +153,11 @@ hr {
   justify-content: flex-start;
 }
 
-/* .food1 {
+.food1 {
   width: 1250px;
   height: 200px;
   max-width: 1250px;
-} */
+}
 
 .breadcrumb-divider {
   border-bottom: 1px solid white;
@@ -183,7 +183,7 @@ hr {
   position: relative;
   width: 1300px;
   height: 500px;
-  margin-left: 0px;
+  margin-right: 20px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -231,7 +231,6 @@ hr {
   height: 650px;
   display: flex;
   align-items: center;
-  justify-content: start;
 }
 
 .text-overlay {
@@ -277,6 +276,7 @@ hr {
   height: 90vh;
   overflow: hidden;
   margin-bottom: 30px;
+  margin-left: 0px;
   
 }
 
@@ -301,7 +301,7 @@ hr {
   border-radius: 20px;
 }
 .grid-image1 {
-  width: 90%;
+  width: 100%;
   max-height: 420px; 
   object-fit: cover;
   display: block;
@@ -320,7 +320,7 @@ hr {
   right: 0;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 90%;
+  width: 100%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
@@ -339,10 +339,7 @@ hr {
 }
 .Partners{
   height: 650px;
-  width: 1450px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  width: 1350px;
   background-color: #242423;
   border-bottom-right-radius: 350px;
 }
