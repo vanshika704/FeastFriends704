@@ -1,7 +1,8 @@
 
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
+import { auth } from './firebaseConfig';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import MainPage from './pages/Page2';
 import Menu from './components/Menu';
 import Partners from './components/partners';
@@ -10,6 +11,7 @@ import MainCoursePage from './pages/Maincourse';
 import StartersPage from './pages/starters';
 import DessertsPage from './pages/Desserts';
 import DrinksPage from './pages/Drinks';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -45,12 +47,20 @@ function Logo() {
 }
 
 function Credentials() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+ 
+  const SignIn = async () => {
+await createUserWithEmailAndPassword (auth , email, password);
+  }
+
+  
   return (
     <div className="credentials">
-      <input type="text" placeholder="Enter Email" />
-      <input type="password" placeholder="Enter Password" />
+      <input type="text" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} />
+      <input type="password" placeholder="Enter Password" onChange={(e) => setPassword (e.target.value)} />
       <Link to="/Page2">
-      <button className="custom-button">Sign In with Email</button>
+      <button className="custom-button" onClick={SignIn}>Sign In with Email</button><br/>
         <button className="custom-button">Sign In with Google</button>
       </Link>
     </div>
