@@ -1,4 +1,4 @@
 function DessertsPage (){
-    return(<>Desserts</>)
+    return(<><div className="Heading">Donut worry, be happy</div></>)
 }
 export default DessertsPage;
