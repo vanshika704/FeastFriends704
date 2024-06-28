@@ -11,6 +11,7 @@ import {
   
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Partners() {
     const FormExample = () => {
@@ -18,6 +19,7 @@ function Partners() {
         const [email, setEmail] = useState('');
         const [location, setLocation] = useState('');
         const [budget, setBudget] = useState('');
+        const navigate = useNavigate();
 
         const [touched, setTouched] = useState({
             name: false,
@@ -42,7 +44,9 @@ function Partners() {
         const isEmailError = email === '' && touched.email;
         const isLocationError = location === '' && touched.location;
         const isBudgetError = budget === '' && touched.budget;
-
+const Submit = ()=>{
+    navigate("/find-partners");
+}
         return (
             <Box
                 maxW="md"
@@ -122,7 +126,7 @@ function Partners() {
                         )}
                     </FormControl>
 
-                    <Button colorScheme="teal" type="submit"  isDisabled={isNameError || isEmailError || isLocationError || isBudgetError}>
+                    <Button colorScheme="teal" type="submit" onClick={Submit} isDisabled={isNameError || isEmailError || isLocationError || isBudgetError}>
                         Submit
                     </Button>
                 </VStack>
