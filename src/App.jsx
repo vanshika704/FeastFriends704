@@ -50,6 +50,7 @@ function Credentials() {
       <input type="text" placeholder="Enter Email" />
       <input type="password" placeholder="Enter Password" />
       <Link to="/Page2">
+      <button className="custom-button">Sign In with Email</button>
         <button className="custom-button">Sign In with Google</button>
       </Link>
     </div>
