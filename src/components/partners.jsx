@@ -8,7 +8,6 @@ import {
     Button,
     Box,
     Heading,
-  
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -28,10 +27,24 @@ function Partners() {
             budget: false,
         });
 
-        const handleNameChange = (e) => setName(e.target.value);
-        const handleEmailChange = (e) => setEmail(e.target.value);
-        const handleLocationChange = (e) => setLocation(e.target.value);
-        const handleBudgetChange = (e) => setBudget(e.target.value);
+        const [isPristine, setIsPristine] = useState(true); // Track form pristine state
+
+        const handleNameChange = (e) => {
+            setName(e.target.value);
+            setIsPristine(false); // Mark form as not pristine on first change
+        };
+        const handleEmailChange = (e) => {
+            setEmail(e.target.value);
+            setIsPristine(false); // Mark form as not pristine on first change
+        };
+        const handleLocationChange = (e) => {
+            setLocation(e.target.value);
+            setIsPristine(false); // Mark form as not pristine on first change
+        };
+        const handleBudgetChange = (e) => {
+            setBudget(e.target.value);
+            setIsPristine(false); // Mark form as not pristine on first change
+        };
 
         const handleBlur = (field) => {
             setTouched({
@@ -44,9 +57,11 @@ function Partners() {
         const isEmailError = email === '' && touched.email;
         const isLocationError = location === '' && touched.location;
         const isBudgetError = budget === '' && touched.budget;
-const Submit = ()=>{
-    navigate("/find-partners");
-}
+
+        const Submit = () => {
+            navigate("/find-partners");
+        };
+
         return (
             <Box
                 maxW="md"
@@ -57,8 +72,6 @@ const Submit = ()=>{
                 boxShadow="lg"
                 bg="white"
                 marginLeft={400}
-                
-                
             >
                 <Heading as="h3" size="lg" mb="4" textAlign="center">
                     User Information
@@ -88,9 +101,7 @@ const Submit = ()=>{
                             onBlur={() => handleBlur('email')}
                         />
                         {!isEmailError ? (
-                            <FormHelperText>
-                                Enter the email 
-                            </FormHelperText>
+                            <FormHelperText>Enter the email</FormHelperText>
                         ) : (
                             <FormErrorMessage>Email is required.</FormErrorMessage>
                         )}
@@ -126,7 +137,14 @@ const Submit = ()=>{
                         )}
                     </FormControl>
 
-                    <Button colorScheme="teal" type="submit" onClick={Submit} isDisabled={isNameError || isEmailError || isLocationError || isBudgetError}>
+                    <Button
+                        colorScheme="teal"
+                        type="submit"
+                        onClick={Submit}
+                        isDisabled={
+                            (isPristine || isNameError || isEmailError || isLocationError || isBudgetError)
+                        }
+                    >
                         Submit
                     </Button>
                 </VStack>
@@ -135,9 +153,7 @@ const Submit = ()=>{
     };
 
     return (
-       <div className='Partners'><FormExample /></div>
-            
-        
+        <div className='Partners'><FormExample /></div>
     );
 }
 
