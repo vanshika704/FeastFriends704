@@ -333,3 +333,6 @@ hr {
   background-color: #464643;
   border-bottom-right-radius: 350px;
 }
+.email-button {
+  margin-bottom: 2px; 
+}

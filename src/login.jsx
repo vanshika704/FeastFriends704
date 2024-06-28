@@ -48,8 +48,8 @@ function Home() {
         <input type="text" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
         
-        <button className="custom-button" onClick={SignIn}>Sign In with Email</button><br/>
-        <button className="custom-button" onClick={SignInGoogle}>Sign In with Google</button>
+        <button className="custom-button email-button" onClick={SignIn}>Sign In with Email</button>
+        <button className="custom-button google-button" onClick={SignInGoogle}>Sign In with Google</button>
       </div>
     );
   }
