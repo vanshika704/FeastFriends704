@@ -1,8 +1,6 @@
-
-
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { auth } from './firebaseConfig';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import MainPage from './pages/Page2';
 import Menu from './components/Menu';
 import Partners from './components/partners';
@@ -33,10 +31,10 @@ function App() {
 
 function Home() {
   return (
-    <><div className='login'>
+    <div className='login'>
       <Logo />
       <Credentials />
-    </div></>
+    </div>
   );
 }
 
@@ -49,20 +47,36 @@ function Logo() {
 function Credentials() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
-  const SignIn = async () => {
-await createUserWithEmailAndPassword (auth , email, password);
-  }
+  const navigate = useNavigate();
 
-  
+  const SignIn = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      alert("User signed in with email and password");
+      navigate("/Page2");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  const SignInGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      alert("User signed in with Google");
+      navigate("/Page2");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <div className="credentials">
       <input type="text" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Enter Password" onChange={(e) => setPassword (e.target.value)} />
-      <Link to="/Page2">
+      <input type="password" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} />
+      
       <button className="custom-button" onClick={SignIn}>Sign In with Email</button><br/>
-        <button className="custom-button">Sign In with Google</button>
-      </Link>
+      <button className="custom-button" onClick={SignInGoogle}>Sign In with Google</button>
     </div>
   );
 }
