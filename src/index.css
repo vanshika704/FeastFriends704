@@ -55,13 +55,6 @@ body {
   margin-left: 480px;
 }
 
-hr {
-  float: right;
-  width: 70%;
-  margin-top: 0px;
-  color: aliceblue;
-  height: 1px;
-}
 
 .credentials input {
   width: 400px;
@@ -322,21 +315,24 @@ hr {
   .logo,.credentials{
     margin-left: 100px;
    }
- 
+   
 }
 
 @media (min-width: 640px) {
  .logo,.credentials{
   margin-left: 100px;
  }
+ 
   
 }
 @media (min-width: 768px) {.logo,.credentials{
   margin-left: 200px;
-}}
+}
+}
 @media (min-width: 1024px) {.logo,.credentials{
   margin-left: 300px;
-}}
+}
+}
 @media (min-width: 1280px) {.logo,.credentials{
   margin-left: 480px;
 }}
