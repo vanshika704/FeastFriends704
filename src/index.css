@@ -53,16 +53,6 @@ body {
   color: rgb(250, 204, 106);
   float: left;
 }
-
-/* .navlogo {
-  height: 100px;
-  width: 100px;
-  margin-right: 70px;
-  margin-left: 0px;
-  margin-top: 50px;
-  position: relative;
-} */
-
 .logo {
   background-image: url('src/assets/logo.png');
   background-repeat: no-repeat;
