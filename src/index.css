@@ -25,12 +25,12 @@ body {
   height: 50px;
 }
 
-.main-content {
+/* .main-content {
   padding-top: 50px;
   width: 1350px;
-}
+} */
 
-.explore {
+/* .explore {
   font-size: 15px;
   color: rgb(248, 247, 243);
   display: flex;
@@ -38,7 +38,7 @@ body {
   justify-content: space-evenly;
   font-family: "DM Serif Text", serif;
   padding-top: 10px;
-}
+} */
 
 .dm-serif-text-regular {
   font-weight: 400;
@@ -54,14 +54,14 @@ body {
   float: left;
 }
 
-.navlogo {
+/* .navlogo {
   height: 100px;
   width: 100px;
   margin-right: 70px;
   margin-left: 0px;
   margin-top: 50px;
   position: relative;
-}
+} */
 
 .logo {
   background-image: url('src/assets/logo.png');
@@ -343,3 +343,28 @@ hr {
   background-color: #242423;
   border-bottom-right-radius: 350px;
 }
+@media (min-width: 440px)   {
+  .logo,.credentials{
+    margin-left: 100px;
+   }
+ 
+}
+
+@media (min-width: 640px) {
+ .logo,.credentials{
+  margin-left: 100px;
+ }
+  
+}
+@media (min-width: 768px) {.logo,.credentials{
+  margin-left: 200px;
+}}
+@media (min-width: 1024px) {.logo,.credentials{
+  margin-left: 300px;
+}}
+@media (min-width: 1280px) {.logo,.credentials{
+  margin-left: 480px;
+}}
+@media (min-width: 1536px) {.logo,.credentials{
+  margin-left: 550px;
+}}
