@@ -3,8 +3,8 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
 function AppBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-black container-fluid"> 
-      {/* <div className="container-fluid"> */}
+    <nav className="navbar navbar-expand-lg navbar-light bg-black "> 
+      <div className="container-fluid">
       <div className="FeastFriends">Feast Friends</div>
        
         <Breadcrumb spacing="10px" separator=" " className="breadcrumb-container">
@@ -24,7 +24,7 @@ function AppBar() {
             <BreadcrumbLink href="#">Contact</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
-      {/* </div> */}
+      </div>
     </nav>
   );
 }
