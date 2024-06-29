@@ -121,11 +121,11 @@ body {
   justify-content: flex-start;
 }
 
-.food1 {
+/* .food1 {
   width: 1250px;
   height: 200px;
   max-width: 1250px;
-}
+} */
 
 
 
@@ -313,11 +313,19 @@ body {
    }
    .navbar{width: 640px;
     height: 50px;}
+    .navbar a{
+      float: right;
+    }
     .breadcrumb-link{
 font-size: 15;
 padding: 2px;
     }
-    
+    .breadcrumb-container{
+      margin-left: 5px;
+    }
+    .FeastFriends{
+      font-size: 20px;
+    } 
 }
 
 @media (min-width: 640px) {
@@ -326,41 +334,73 @@ padding: 2px;
  }
  .navbar{width: 840px;
   height: 50px;}
+  .navbar a{
+    float: right;
+  }
   .breadcrumb-link{
     font-size: 17;
     padding: 4px;
         }
-  
+        .breadcrumb-container{
+          margin-left: 10px;
+        }
+        .FeastFriends{
+          font-size: 15px;
+        }
 }
 @media (min-width: 768px) {.logo,.credentials{
   margin-left: 200px;
 }
 .navbar{width: 968px;
   height: 40px;}
-}
-.breadcrumb-link{
-  font-size: 17;
-  padding: 5px;
-      }
+  .navbar a{
+float: left;
+  }
+  .breadcrumb-container{
+    margin-left: 1px;
+    float: right;
+  }.breadcrumb-link{
+    font-size: 17;
+    padding: 1px;
+        }
+        .FeastFriends{
+          font-size: 20px;
+        }}
+
 @media (min-width: 1024px) {.logo,.credentials{
   margin-left: 300px;
 }
 .navbar{width: 1224px;
   height: 45px;}
+  .breadcrumb-container{
+    margin-left: 20px;
+  }
+  .breadcrumb-link{
+    font-size: 19;
+    padding: 7px;
+        }
+        .FeastFriends{
+          font-size: 25px;
+        }
 }
-.breadcrumb-link{
-  font-size: 19;
-  padding: 7px;
-      }
+
 @media (min-width: 1280px) {.logo,.credentials{
   margin-left: 480px;
 }
 .navbar{width: 1350px;
-  height: 50px;}}
+  height: 50px;}
   .breadcrumb-link{
     font-size: 21;
     padding: 9px;
         }
+        .breadcrumb-container{
+          margin-left: 25px;
+        }
+        .FeastFriends{
+          font-size: 30px;
+        }
+     }
+  
 @media (min-width: 1536px) {.logo,.credentials{
   margin-left: 550px;
 }
@@ -369,4 +409,10 @@ height: 50px;}
 .breadcrumb-link{
   font-size: 23;
   padding: 10px;
-      }}
+      }
+    .breadcrumb-container{
+      margin-left: 30px;
+    }
+    .FeastFriends{
+      font-size: 35px;
+    }}
