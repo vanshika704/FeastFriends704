@@ -3,8 +3,9 @@ import "../index.css";
 import { FaSearch, FaPeopleArrows } from "react-icons/fa";
 import { MdRestaurantMenu } from "react-icons/md";
 import Gallery from '../components/backgroundcarousal';
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem, useBreakpointValue } from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
+
 function MainPage() {
   return (
     <div>
@@ -62,17 +63,28 @@ function Greycontainer() {
 }
 
 function Info() {
+  const templateColumns = useBreakpointValue({
+    base: "repeat(auto-fit, minmax(100px, 1fr))",
+    md: "repeat(4, 1fr)"
+  });
+  const templateRows = useBreakpointValue({
+    base: "repeat(4, auto)",
+    md: "repeat(2, 1fr)"
+  });
+  const colSpanLarge = useBreakpointValue({ base: 1, md: 2 });
+  const rowSpanLarge = useBreakpointValue({ base: 1, md: 2 });
+
   return (
-    <div className='info '>
+    <div className='info'>
       <Grid
-        h="400px"
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(4, 1fr)"
+        width="100%"
+        h="auto"
+        templateRows={templateRows}
+        templateColumns={templateColumns}
         gap={4}
-        marginLeft={0}
         className='container-fluid'
       >
-        <GridItem className="grid-item container-fluid" rowSpan={2} colSpan={2}>
+        <GridItem className="grid-item container-fluid" rowSpan={rowSpanLarge} colSpan={colSpanLarge}>
           <Link to="/starters" className="image-box">
             <img src='src/assets/c1.jpg' alt='starters' className='grid-image1' />
             <div className="overlay-text1">Starters</div>
@@ -90,7 +102,7 @@ function Info() {
             <div className="overlay-text1">Desserts</div>
           </Link>
         </GridItem>
-        <GridItem className="grid-item" colSpan={2} rowSpan={1}>
+        <GridItem className="grid-item" colSpan={colSpanLarge} rowSpan={1}>
           <Link to="/drinks" className="image-box">
             <img src='src/assets/kobby-mendez-xBFTjrMIC0c-unsplash.jpg' alt='Drinks' className='grid-image' />
             <div className="overlay-text1">Drinks</div>
@@ -100,6 +112,7 @@ function Info() {
     </div>
   );
 }
+
 function Data(){
   return (<><div className='data'>data</div></>)
 }
