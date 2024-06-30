@@ -77,12 +77,12 @@ function Info() {
   return (
     <div className='info'>
       <Grid
-        width="100%"
+        width="90%"
         h="auto"
         templateRows={templateRows}
         templateColumns={templateColumns}
         gap={4}
-        className='container-fluid'
+       
       >
         <GridItem className="grid-item container-fluid" rowSpan={rowSpanLarge} colSpan={colSpanLarge}>
           <Link to="/starters" className="image-box">
