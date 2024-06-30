@@ -63,7 +63,7 @@ function Greycontainer() {
 
 function Info() {
   return (
-    <div className='info container-fluid'>
+    <div className='info '>
       <Grid
         h="400px"
         templateRows="repeat(2, 1fr)"
