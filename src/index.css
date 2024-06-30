@@ -422,7 +422,7 @@ float: left;
 @media (min-width: 1280px) {.logo,.credentials{
   margin-left: 480px;
 }
-.navbar{width: 1350px;
+.navbar{width: 1500px;
   height: 50px;}
   .breadcrumb-link{
     font-size: 21;
