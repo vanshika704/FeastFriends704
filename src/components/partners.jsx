@@ -8,6 +8,7 @@ import {
     Button,
     Box,
     Heading,
+    useBreakpointValue
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -62,9 +63,11 @@ function Partners() {
             navigate("/find-partners");
         };
 
+        const boxWidth = useBreakpointValue({ base: "100%", sm: "90%", md: "70%", lg: "50%" });
+
         return (
             <Box
-                maxW={{ base: "95%", sm: "80%", md: "60%", lg: "50%" }}
+                maxW={boxWidth}
                 borderWidth="1px"
                 borderRadius="lg"
                 overflow="hidden"
