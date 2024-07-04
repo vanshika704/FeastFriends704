@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../firebaseConfig';
+import { db } from '../firebaseConfig';// import the constant you made in firebase.js
 import { collection, addDoc } from 'firebase/firestore';
 
 function Partners() {
