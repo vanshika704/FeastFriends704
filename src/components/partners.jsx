@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { db } from '../firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
 
 function Partners() {
     const FormExample = () => {
@@ -20,7 +22,6 @@ function Partners() {
         const [location, setLocation] = useState('');
         const [budget, setBudget] = useState('');
         const navigate = useNavigate();
-
         const [touched, setTouched] = useState({
             name: false,
             email: false,
@@ -59,8 +60,18 @@ function Partners() {
         const isLocationError = location === '' && touched.location;
         const isBudgetError = budget === '' && touched.budget;
 
-        const Submit = () => {
-            navigate("/find-partners");
+        const Submit = async () => {
+            try {
+                await addDoc(collection(db, "users"), {
+                    name: name,
+                    email: email,
+                    location: location,
+                    budget: budget
+                });
+                navigate("/find-partners");
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
         };
 
         const boxWidth = useBreakpointValue({ base: "100%", sm: "90%", md: "70%", lg: "50%" });
