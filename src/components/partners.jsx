@@ -60,7 +60,7 @@ function Partners() {
         const isLocationError = location === '' && touched.location;
         const isBudgetError = budget === '' && touched.budget;
 
-        const Submit = async () => {
+        const Submit = async () => {// created a function named submit
             try {
                 await addDoc(collection(db, "users"), {
                     name: name,
