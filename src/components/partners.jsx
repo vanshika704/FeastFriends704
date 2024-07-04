@@ -62,7 +62,7 @@ function Partners() {
 
         const Submit = async () => {// created a function named submit
             try {
-                await addDoc(collection(db, "users"), {
+                await addDoc(collection(db, "users"), { // await krne ko bola , ki ek collection h , user name ki , db ke ander
                     name: name,
                     email: email,
                     location: location,
