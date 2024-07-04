@@ -13,7 +13,7 @@ import {
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../firebaseConfig';// import the constant you made in firebase.js
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';// importing the collection and adddoc from firestore , it is provided by them only , is not a self made function.
 
 function Partners() {
     const FormExample = () => {
