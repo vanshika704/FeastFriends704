@@ -1,4 +1,4 @@
 function Findpartner(){
-    return (<>Aaaagye bhoookhe logo?</>)
+    return (<><div className="data"></div></>)
 }
 export default Findpartner;
