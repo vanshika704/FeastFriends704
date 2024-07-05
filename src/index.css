@@ -303,6 +303,12 @@ body {
   background-color: #242423;
   /* border-bottom-right-radius: 350px; */
 }
+.find{
+  font-size:xx-large;
+  font-family:"DM Serif Text", serif ;
+  color: aliceblue;
+  margin-left: 500px;
+}
 @media (min-width: 440px)   {
   .logo,.credentials{
     margin-left: 100px;
