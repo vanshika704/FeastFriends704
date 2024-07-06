@@ -241,6 +241,11 @@ body {
   margin-left: 0px;
   
 }
+.gallery-container1{
+  margin-top: 30px;
+  justify-content: start;
+  align-items: start;
+}
 
 .alice-carousel {
   height: 100%;

@@ -56,7 +56,7 @@ function Cards() {
                   <Image
                     src={item.imageSrc}
                     borderRadius='lg'
-                    width={100}
+                    width={400}
                     height={100}
                     onDragStart={handleDragStart}
                   />
