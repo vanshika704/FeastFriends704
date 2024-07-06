@@ -316,7 +316,10 @@ body {
   color: rgb(248, 202, 102);
   margin-left: 20px;
 }
-
+.Cards{
+  height: 500px;
+  width: 380px;
+}
 @media (min-width: 440px)   {
   .logo,.credentials{
     margin-left: 100px;
