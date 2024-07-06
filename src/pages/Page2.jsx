@@ -45,7 +45,7 @@ function Greycontainer() {
         </Link>
       </div>
       <div>
-        <Link to="/partners">
+        <Link to="/findpartners">
           <FaPeopleArrows size={30} />
           <div className="spacer"></div>
           <div>Partners</div>
