@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Stack, Heading, Text } from '@chakra-ui/react';
+import { Card, CardBody, Image, Stack, Heading, Text,  } from '@chakra-ui/react';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css'; 
@@ -8,6 +8,7 @@ const theme = extendTheme({
     heading: `'Poppins', sans-serif`,
     body: `'Poppins', sans-serif`,
   },
+  
 });
 
 function Cards() {
@@ -51,7 +52,7 @@ function Cards() {
         >
           {items.map((item, index) => (
             <div key={index} className="Cards">
-              <Card maxW='sm' width="100%" height="100%" backgroundColor='white'>
+              <Card maxW='sm' width="100%" height="100%"  backgroundColor='rgb(248, 202, 102)'>
                 <CardBody>
                   <Image
                     src={item.imageSrc}
