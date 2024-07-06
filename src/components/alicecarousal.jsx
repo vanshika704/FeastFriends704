@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Stack, Heading, Text } from '@chakra-ui/react';
+import { Card, CardBody, Image, Stack, Heading, Text, Box } from '@chakra-ui/react';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css'; 
@@ -9,7 +9,6 @@ const theme = extendTheme({
     heading: `'Poppins', sans-serif`,
     body: `'Poppins', sans-serif`,
   },
-  
 });
 
 function Cards() {
@@ -34,7 +33,6 @@ function Cards() {
       description: 'Planning a feast with a larger group? Our platform helps you coordinate and manage contributions for a fun and memorable dining event.',
       link: '/more-than-4-partners'  ,
     },
-    
   ];
 
   return (
@@ -47,7 +45,6 @@ function Cards() {
           disableDotsControls
           infinite
           disableButtonsControls
-          items={items}
           responsive={{
             0: { items: 1 },
             768: { items: 2 },
@@ -55,14 +52,14 @@ function Cards() {
           }}
         >
           {items.map((item, index) => (
-            <div key={index} className="Cards">
+            <Box key={index} mx={1} className="Cards"> 
               <Link to={item.link}>
-                <Card maxW='sm' maxH='sm' width="100%" height="50%"  backgroundColor='rgb(248, 202, 102)'>
+                <Card maxW='sm' maxH='sm' width="100%" height="50%" backgroundColor='rgb(248, 202, 102)'>
                   <CardBody>
                     <Image
                       src={item.imageSrc}
                       borderRadius='lg'
-                      width={400}
+                      width={300}
                       height={100}
                       onDragStart={handleDragStart}
                     />
@@ -75,7 +72,7 @@ function Cards() {
                   </CardBody>
                 </Card>
               </Link>
-            </div>
+            </Box>
           ))}
         </AliceCarousel>
       </ChakraProvider>
