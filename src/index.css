@@ -332,6 +332,7 @@ body {
 }
 .imagefind{
   height: 650px;
+  width: 500px;
  border-top-right-radius: 500px;
  border-bottom-right-radius: 500px;
 }
@@ -365,6 +366,7 @@ padding: 2px;
     .data{
       width: 550px;
     }
+ 
 }
 
 @media (min-width: 640px) {
