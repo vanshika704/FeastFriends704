@@ -298,8 +298,9 @@ body {
   font-family: "DM Serif Text", serif;
   height: 650px;
   width: 1350px;
-  background-color: #464643;
+  background-color: #242423;
   border-bottom-right-radius: 350px;
+  display: flex;
 }
 .email-button {
   margin-bottom: 2px; 
@@ -313,12 +314,26 @@ body {
 .find{
   font-size:xx-large;
   font-family:"DM Serif Text", serif ;
-  color: rgb(248, 202, 102);
+  color: rgb(156, 208, 231);
   margin-left: 20px;
+  background-color: #242423;
+  margin-left: 0px;
+ 
 }
 .Cards{
   height: 520px;
   width: 380px;
+}
+.cardscontainer{
+  width: 60%;
+  float: right;
+  margin-left: 20px;
+  margin-top: 60px;
+}
+.imagefind{
+  height: 650px;
+ border-top-right-radius: 500px;
+ border-bottom-right-radius: 500px;
 }
 @media (min-width: 440px)   {
   .logo,.credentials{

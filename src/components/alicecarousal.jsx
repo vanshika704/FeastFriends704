@@ -48,13 +48,13 @@ function Cards() {
           responsive={{
             0: { items: 1 },
             768: { items: 2 },
-            1024: { items: 3 },
+            1024: { items: 2 },
           }}
         >
           {items.map((item, index) => (
             <Box key={index} mx={1} className="Cards"> 
               <Link to={item.link}>
-                <Card maxW='sm' maxH='sm' width="100%" height="50%" backgroundColor='rgb(248, 202, 102)'>
+                <Card maxW='sm' maxH='sm' width="100%" height="50%" backgroundColor='rgb(156, 208, 231);'>
                   <CardBody>
                     <Image
                       src={item.imageSrc}
