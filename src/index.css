@@ -318,6 +318,7 @@ body {
   margin-left: 20px;
   background-color: #242423;
   margin-left: 0px;
+  display: flex;
  
 }
 .Cards{
@@ -335,6 +336,18 @@ body {
   width: 500px;
  border-top-right-radius: 500px;
  border-bottom-right-radius: 500px;
+}
+.location{
+  background-color: #242423;
+  margin-left: 600px;
+  width: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 4px double rgb(156, 208, 231);
+  color: rgb(156, 208, 231);
+  font-size: 16px;
+  border-radius: 20px;
+  margin-left: 900px;
 }
 @media (min-width: 440px)   {
   .logo,.credentials{
