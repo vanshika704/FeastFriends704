@@ -366,6 +366,9 @@ padding: 2px;
     .data{
       width: 550px;
     }
+    .imagefind{
+      width: 100px;
+    }
  
 }
 
@@ -398,6 +401,9 @@ padding: 2px;
         .data{
           width: 850px;
         }
+        .imagefind{
+          width: 200px;
+        }
 }
 @media (min-width: 768px) {.logo,.credentials{
   margin-left: 200px;
@@ -425,7 +431,10 @@ float: left;
         }
         .data{
           width: 950px;
-        }}
+        } .imagefind{
+          width: 400px;
+        }
+      }
 
 @media (min-width: 1024px) {.logo,.credentials{
   margin-left: 300px;
@@ -450,6 +459,9 @@ float: left;
         }
         .data{
           width: 1150px;
+        }
+        .imagefind{
+          width: 500px;
         }
 }
 
@@ -477,6 +489,9 @@ float: left;
         .data{
           width: 1350px;
         }
+        .imagefind{
+          width: 500px;
+        }
      }
   
 @media (min-width: 1536px) {.logo,.credentials{
@@ -502,5 +517,8 @@ height: 50px;}
   }
   .data{
     width: 1750px;
+  }
+  .imagefind{
+    width: 100px;
   }
 }
