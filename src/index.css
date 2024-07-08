@@ -296,7 +296,7 @@ body {
 }
 .data{
   font-family: "DM Serif Text", serif;
-  height: 650px;
+  height: 600px;
   width: 1350px;
   background-color: #242423;
   border-bottom-right-radius: 350px;
@@ -306,7 +306,7 @@ body {
   margin-bottom: 2px; 
 }
 .Partners{
-  height: 650px;
+  height: 600px;
   width: 1350px;
   background-color: #242423;
   /* border-bottom-right-radius: 350px; */
@@ -332,7 +332,7 @@ body {
   margin-top: 60px;
 }
 .imagefind{
-  height: 650px;
+  height: 600px;
   width: 500px;
  border-top-right-radius: 500px;
  border-bottom-right-radius: 500px;
@@ -343,11 +343,12 @@ body {
   width: 100px;
   margin: 10px 0;
   padding: 10px;
-  border: 4px double rgb(156, 208, 231);
+
   color: rgb(156, 208, 231);
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 20px;
   margin-left: 900px;
+  display: flex;
 }
 @media (min-width: 440px)   {
   .logo,.credentials{
