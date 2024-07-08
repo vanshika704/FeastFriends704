@@ -296,11 +296,12 @@ body {
 }
 .data{
   font-family: "DM Serif Text", serif;
-  height: 600px;
+  height: 560px;
   width: 1350px;
   background-color: #242423;
   border-bottom-right-radius: 350px;
   display: flex;
+  position: relative;
 }
 .email-button {
   margin-bottom: 2px; 
@@ -332,7 +333,7 @@ body {
   margin-top: 60px;
 }
 .imagefind{
-  height: 600px;
+  height: 560px;
   width: 500px;
  border-top-right-radius: 500px;
  border-bottom-right-radius: 500px;
