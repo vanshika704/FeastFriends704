@@ -296,19 +296,19 @@ body {
 }
 .data{
   font-family: "DM Serif Text", serif;
-  height: 560px;
-  width: 1350px;
+  height: 570px;
+  width: 1360px;
   background-color: #242423;
   border-bottom-right-radius: 350px;
   display: flex;
-  position: relative;
+  position: fixed;
 }
 .email-button {
   margin-bottom: 2px; 
 }
 .Partners{
   height: 600px;
-  width: 1350px;
+  width: 1380px;
   background-color: #242423;
   /* border-bottom-right-radius: 350px; */
 }
@@ -320,6 +320,7 @@ body {
   background-color: #242423;
   margin-left: 0px;
   display: flex;
+  width: 1350px;
  
 }
 .Cards{
