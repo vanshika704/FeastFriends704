@@ -19,13 +19,13 @@ function Cards() {
       imageSrc: 'src/assets/1image.jpg',
       title: 'Find One Partner',
       description: 'Want to have an affordable yet delicious meal? Find a Partner who shares your tastes and split the bill for a more economical dining experience.',
-      link: '/find-one-partner'  // Specify the link for each card
+      link: '/find-one-partner'  
     },
     {
       imageSrc: 'src/assets/image2.jpg',
       title: '2-4 Partners',
       description: 'Dining with a small group? Enjoy a variety of dishes and share the cost. Perfect for a cozy get-together or a double date.',
-      link: '/2-4-partners'  // Specify the link for each card
+      link: '/2-4-partners'  
     },
     {
       imageSrc: 'src/assets/image3.webp',
